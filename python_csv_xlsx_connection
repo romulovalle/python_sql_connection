@@ -1,0 +1,13 @@
+import pandas as pd
+
+# Carregar o arquivo XLSX em um DataFrame
+df = pd.read_excel('arquivo.xlsx')
+df = pd.read_csv(caminho_arquivo)
+
+# Converter todas as letras para maiúsculas em uma coluna
+df['Column'] = df['Column'].str.upper()
+
+# Salvar o DataFrame tratado em um novo arquivo XLSX
+# Substitua 'caminho_para_novo_arquivo.xlsx' pelo caminho onde deseja salvar o novo arquivo XLSX
+df.to_excel('arquivo_novo.xlsx', index=False)
+df.to_csv('arquivo_novo.csv', index=False)
